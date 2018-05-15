@@ -3,7 +3,7 @@ public class Mundo{
     int i,j;
     for(i=0;i<30;i++){
       for(j=0;j<70;j++){
-        mundo[i][j] = '-';
+        mundo[i][j] = ' ';
         //Isso vai fazer as laterais
         mundo[i][0] = '1';/*limite superior do mapa*/
         mundo[0][j] = '2';/*limite lateral esquerda do mapa*/
@@ -21,14 +21,14 @@ public class Mundo{
     }
   }
   public void setMundoV(int x, int y, int tipo){
-    /*Definindo os pontos dos veiculos*/
-    if(tipo == 2){//car
+
+    if(tipo == 2){
 			mundo[x][y] = 'C';
 			mundo[x][y+1] = 'C';
 			mundo[x][y+2] = 'C';
 			mundo[x][y+3] = 'C';
 		}
-		else if(tipo == 1){ //truck
+		else if(tipo == 1){ 
 			mundo[x][y] = 'J';
 			mundo[x+1][y] = 'J';
 			mundo[x][y+1] = 'J';
@@ -36,7 +36,7 @@ public class Mundo{
 			mundo[x][y+2] = 'J';
 			mundo[x+1][y+2] = 'J';
 		}
-		else if(tipo == 3){ //bike
+		else if(tipo == 3){ 
 			mundo[x][y] = 'L';
 		}
 
@@ -44,6 +44,7 @@ public class Mundo{
   public void setPlayer(){
 	  mundo[0][35] = 'P';
 	}
+
  
   private char[][]mundo = new char[30][70];
   

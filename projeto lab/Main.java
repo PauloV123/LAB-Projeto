@@ -1,3 +1,4 @@
+
 import java.util.Iterator;
 import java.util.Scanner;
 import java.util.ArrayList;
@@ -17,12 +18,12 @@ class Main {
     ArrayList <Jacare> j = new ArrayList<>();
     
     for(i=0;i<4;i++){
-          int xc = (int)(Math.random()*30);
-		  		int yc = (int)(Math.random()*70);
-		  		int xl = (int)(Math.random()*30);
-		  		int yl = (int)(Math.random()*70);
-		  		int xj = (int)(Math.random()*30);
-		  		int yj = (int)(Math.random()*70);
+          int xc = (int)(Math.random()*27);
+		  		int yc = (int)(Math.random()*67);
+		  		int xl = (int)(Math.random()*27);
+		  		int yl = (int)(Math.random()*67);
+		  		int xj = (int)(Math.random()*27);
+		  		int yj = (int)(Math.random()*67);
 		  		c.add(new Cobra(xc,yc,2));
 		  		l.add(new Leao(xl,yl,3));
 		  		j.add(new Jacare(xj,yj,1));

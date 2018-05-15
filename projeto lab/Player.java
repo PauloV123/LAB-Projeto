@@ -56,7 +56,7 @@ public class Player{
 		}
 		
 	}
-	
+	//LOGICA FABRICA
 	/*public void temParede(ArrayList<Leao> l, 
 	ArrayList<Cobra> c, ArrayList<Jacare> j, int tipo){
 	  int xRandom = (int)(Math.random()*30);

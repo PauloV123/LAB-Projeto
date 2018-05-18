@@ -6,27 +6,26 @@ import java.util.Random;
 
 class Main {
   public static void main(String[] args) {
-    Mundo M = new  Mundo();
-    M.criaMundo();
+  Mundo M = new  Mundo();
+  M.criaMundo();
     
-    System.out.println();
+  System.out.println();
     
-    int i;
-    //
-    ArrayList <Cobra> c = new ArrayList<>();
-    ArrayList <Leao> l = new ArrayList<>();
-    ArrayList <Jacare> j = new ArrayList<>();
+  int i;
+  ArrayList <Cobra> c = new ArrayList<>();
+  ArrayList <Leao> l = new ArrayList<>();
+  ArrayList <Jacare> j = new ArrayList<>();
     
     for(i=0;i<4;i++){
-          int xc = (int)(Math.random()*27);
-		  		int yc = (int)(Math.random()*67);
-		  		int xl = (int)(Math.random()*27);
-		  		int yl = (int)(Math.random()*67);
-		  		int xj = (int)(Math.random()*27);
-		  		int yj = (int)(Math.random()*67);
-		  		c.add(new Cobra(xc,yc,2));
-		  		l.add(new Leao(xl,yl,3));
-		  		j.add(new Jacare(xj,yj,1));
+       int xc = (int)(Math.random()*27);
+       int yc = (int)(Math.random()*67);
+       int xl = (int)(Math.random()*27);
+       int yl = (int)(Math.random()*67);
+       int xj = (int)(Math.random()*27);
+       int yj = (int)(Math.random()*67);
+       c.add(new Cobra(xc,yc,2));
+       l.add(new Leao(xl,yl,3));
+       j.add(new Jacare(xj,yj,1));
 		  	
     }
     for(i=0;i<4;i++){
@@ -63,6 +62,11 @@ class Main {
     	for(i=0;i<5;i++){
     	  System.out.printf("\n");
     	}
+	try{ 	
+            Thread.sleep(800);///esta funcao permite "pausar" o programa a cada instancia de tempo determinada pelo programador 
+	} 
+        catch(InterruptedException e){
+	}
     	
     }
     for ( i = 0; i < j.size(); i++) {

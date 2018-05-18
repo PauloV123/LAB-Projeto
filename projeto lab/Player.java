@@ -3,16 +3,16 @@ import java.util.Scanner;
 import java.util.ArrayList;
 import java.util.Random;
 
-public class Player{
-  protected int x;
-  protected int y;
-  protected int velo;
+abstract class Player{
+  int x;
+  int y;
+  int velo;
   int i,j;
   
   public Player(int x, int y, int velo){
     this.x = x;
     this.y = y;
-		this.velo = velo;
+	this.velo = velo;
   }
   public void setVelo(int velo){
     this.velo = velo;
@@ -33,6 +33,7 @@ public class Player{
 	public int getY(){
 		return y;
 	}
+	abstract int tamanho();
 	
 	/*Função de movimentaçao dos veiculos*/
 	public void move(ArrayList<Leao> l, ArrayList<Cobra> c, ArrayList<Jacare> j, int tipo){

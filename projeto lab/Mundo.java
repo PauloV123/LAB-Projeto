@@ -23,22 +23,14 @@ public class Mundo{
   public void setMundoV(int x, int y, int tipo){
 
     if(tipo == 2){
-			mundo[x][y] = 'C';
-			mundo[x][y+1] = 'C';
-			mundo[x][y+2] = 'C';
-			mundo[x][y+3] = 'C';
-		}
-		else if(tipo == 1){ 
-			mundo[x][y] = 'J';
-			mundo[x+1][y] = 'J';
-			mundo[x][y+1] = 'J';
-			mundo[x+1][y+1] = 'J';
-			mundo[x][y+2] = 'J';
-			mundo[x+1][y+2] = 'J';
-		}
-		else if(tipo == 3){ 
-			mundo[x][y] = 'L';
-		}
+	mundo[x][y] = 'C';
+	}
+	else if(tipo == 1){ 
+		mundo[x][y] = 'J';
+	}
+	else if(tipo == 3){ 
+		mundo[x][y] = 'L';
+	}
 
   }
   public void setPlayer(){

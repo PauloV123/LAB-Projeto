@@ -2,6 +2,8 @@ import java.util.ArrayList;
 
 
 public class Mundo {
+	ArrayList<Player> animais = new ArrayList<>();
+	
 	public void criaMundo(){
 	    int i,j;
 	    for(i=0;i<30;i++){
@@ -16,6 +18,11 @@ public class Mundo {
 	    }
 	  }
 	  public void imprimeMundo(){
+		  
+		  for(Player p : animais){
+			  p.draw(mundo);
+		  }
+		  
 	    for(int i = 0; i < 30; i++){
 	      System.out.println("");
 	      for(int j = 0; j < 70; j++){
@@ -23,25 +30,21 @@ public class Mundo {
 	      }
 	    }
 	  }
-	  public void setMundoV(ArrayList<Leao> l, ArrayList<Cobra> c, ArrayList<Jacare> j, int tipo){
-
-	    if(tipo == 2){
-	    	
-		}
-	    else if(tipo == 1){ 
-			
-		}
-	   else if(tipo == 3){ 
-			
-		}
+	  
+	   
+	  public void addMundo(ArrayList<? extends Player> p){
+		  animais.addAll(p);
 
 	  }
+	  
 	  public void setPlayer(){
 		  mundo[0][34] = 'P';
 		}
 
 	 
 	  private char[][]mundo = new char[30][70];
+
+		
+	}
 	  
 	  
-}

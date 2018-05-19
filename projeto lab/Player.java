@@ -31,10 +31,11 @@ abstract class Player {
 	  public int getY(){
 	      return y;
 		}
-	  abstract int[][] tamanho();
+	  
+	 public abstract void draw(char [][] mundo);
+ 
 		
-		
-	 public void move(ArrayList<Leao> l, ArrayList<Cobra> c, ArrayList<Jacare> j, int tipo){
+	 public void move(){
 		Random random = new Random();
 		int r = random.nextInt(4);
 		if(r==0){

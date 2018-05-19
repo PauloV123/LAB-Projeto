@@ -1,6 +1,5 @@
-
-import java.util.Iterator;
-import java.util.Scanner;
+//import java.util.Iterator;
+//import java.util.Scanner;
 import java.util.ArrayList;
 import java.util.Random;
 
@@ -26,16 +25,22 @@ class Main {
        c.add(new Cobra(xc,yc,2));
        l.add(new Leao(xl,yl,3));
        j.add(new Jacare(xj,yj,1));
-		  	
+       
+       
     }
+    
+    
+    
+    
     for(i=0;i<4;i++){
-      M.setMundoV(c.get(i).getX(),c.get(i).getY(),2);
-      M.setMundoV(l.get(i).getX(),l.get(i).getY(),3);
-      M.setMundoV(j.get(i).getX(),j.get(i).getY(),1);
+
+      M.addMundo(l);
+      M.addMundo(c);
+      M.addMundo(j);
       M.setPlayer();
     }
     M.imprimeMundo();
-    while(c.size()> 0 | l.size() > 0){
+    /*while(c.size()> 0 | l.size() > 0){
       for(i=0;i<c.size();i++){
         c.get(i).move(l,c,j,2);
       }
@@ -46,14 +51,14 @@ class Main {
         j.get(i).move(l,c,j,1);
       }
       M.criaMundo();
-      for(i=0;i<c.size();i++){
-    		M.setMundoV(c.get(i).getX(),c.get(i).getY(),2);
+      for(i=0;i<l.size();i++){
+    		M.setMundoL(l);
     	}
-    	for(i=0;i<l.size();i++){
-    		M.setMundoV(l.get(i).getX(),l.get(i).getY(),3);
+    	for(i=0;i<c.size();i++){
+    		M.setMundoC(c);
     	}
     	for(i=0;i<j.size();i++){
-    		M.setMundoV(j.get(i).getX(),j.get(i).getY(),1);
+    		M.setMundoJ(j);
     	}
     	M.setPlayer();
     	System.out.println();
@@ -77,6 +82,6 @@ class Main {
       }
       for ( i = 0; i < l.size(); i++) {
         l.remove(i);
-      }
+      }*/
   }
 }

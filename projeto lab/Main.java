@@ -1,5 +1,3 @@
-//import java.util.Iterator;
-//import java.util.Scanner;
 import java.util.ArrayList;
 import java.util.Random;
 
@@ -40,25 +38,27 @@ class Main {
       M.setPlayer();
     }
     M.imprimeMundo();
-    /*while(c.size()> 0 | l.size() > 0){
+    while(true){
       for(i=0;i<c.size();i++){
-        c.get(i).move(l,c,j,2);
+        c.get(i).move();
       }
       for(i=0;i<l.size();i++){
-        l.get(i).move(l,c,j,3);
+        l.get(i).move();
       }
       for(i=0;i<j.size();i++){
-        j.get(i).move(l,c,j,1);
+        j.get(i).move();
       }
       M.criaMundo();
       for(i=0;i<l.size();i++){
-    		M.setMundoL(l);
+    		M.addMundo(l);
+     
     	}
     	for(i=0;i<c.size();i++){
-    		M.setMundoC(c);
+    		 M.addMundo(c);
+     
     	}
     	for(i=0;i<j.size();i++){
-    		M.setMundoJ(j);
+    		 M.addMundo(j);
     	}
     	M.setPlayer();
     	System.out.println();
@@ -82,6 +82,6 @@ class Main {
       }
       for ( i = 0; i < l.size(); i++) {
         l.remove(i);
-      }*/
+      }
   }
 }

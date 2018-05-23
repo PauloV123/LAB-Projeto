@@ -10,7 +10,7 @@ abstract class Player {
 	public Player(int x, int y, int velo){
 	    this.x = x;
 	    this.y = y;
-		this.velo = velo;
+            this.velo = velo;
 	  }
 	  public void setVelo(int velo){
 	    this.velo = velo;
@@ -35,24 +35,6 @@ abstract class Player {
 	 public abstract void draw(char [][] mundo);
  
 		
-	 public void move(){
-		Random random = new Random();
-		int r = random.nextInt(4);
-		if(r==0){
-		  y = (y+velo)%60;
-		}
-		else if(r==1){
-		  y=(y-velo)%60;
-			if(y<0)
-			   y=60-Math.abs(y);
-		}
-		else if(r==2){
-		  x=(x+velo)%30;
-		}
-		else if(r==3){
-		  x=(x-velo)%30;
-			if(x<0)
-			  x=30-Math.abs(x);
-			}
-		}               
+	 public abstract void move(int x, int y, int velo);
+		
 	}

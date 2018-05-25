@@ -1,4 +1,3 @@
-
 import java.util.ArrayList;
 
 
@@ -55,21 +54,33 @@ public class Mundo {
 			  i--;
 		  }
 	  }
-	  public void pegaArea(){
+	  public int pegaArea(){
 		  int i;
 		  int j;
+		  int contA = 0;
 		  for(i=1;i<10;i++) {
 			  for(j=1;j<33;j++) {
 				  mundo[i][j] = '+';
 			  }
+			
 		  }
+		  for(i=1;i<10;i++) {
+			  for(j=1;j<33;j++) {
+				  contA++;
+			  }
+			  
+		  }
+		  return contA;
+	  }
+	  public int terminaMundo(int contA) {
+		  int acaba;
+		  if(contA == 1529) {
+			  acaba = 1;
+		  }else {
+			  acaba = 0;
+		  }
+		  return acaba;
 	  }
 	  private char[][]mundo = new char[60][100];
 		  
 	  }
-
-	 
-	 
-
-		
-	

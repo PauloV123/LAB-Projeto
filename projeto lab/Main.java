@@ -27,9 +27,6 @@ class Main {
        
     }
     
-    
-    
-    
     for(i=0;i<4;i++){
 
       M.addMundo(l);
@@ -40,13 +37,13 @@ class Main {
     M.imprimeMundo();
     while(true){
       for(i=0;i<c.size();i++){
-        c.get(i).move();
+        c.get(i).move(2);
       }
       for(i=0;i<l.size();i++){
-        l.get(i).move();
+        l.get(i).move(3);
       }
       for(i=0;i<j.size();i++){
-        j.get(i).move();
+        j.get(i).move(1);
       }
       M.criaMundo();
       for(i=0;i<l.size();i++){
@@ -67,14 +64,7 @@ class Main {
     	for(i=0;i<5;i++){
     	  System.out.printf("\n");
     	}
-	try{ 	
-            Thread.sleep(800);///esta funcao permite "pausar" o programa a cada instancia de tempo determinada pelo programador 
-	} 
-        catch(InterruptedException e){
-	}
-    	
-    }
-    for ( i = 0; i < j.size(); i++) {
+	    for ( i = 0; i < j.size(); i++) {
         j.remove(i);
       }
       for ( i = 0; i < c.size(); i++) {
@@ -83,5 +73,13 @@ class Main {
       for ( i = 0; i < l.size(); i++) {
         l.remove(i);
       }
+	try{ 	
+            Thread.sleep(800);///esta funcao permite "pausar" o programa a cada instancia de tempo determinada pelo programador 
+	} 
+        catch(InterruptedException e){
+	}
+    	
+    }
+    
   }
 }

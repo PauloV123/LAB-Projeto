@@ -1,4 +1,5 @@
 
+package LAB;
 import java.util.ArrayList;
 import java.util.Random;
 
@@ -60,10 +61,13 @@ class Main {
     	}
     	M.setPlayer();
     	M.andaPlayer();
-    	M.pegaArea();
+    	int d = M.pegaArea();
     	System.out.println();
     	M.imprimeMundo();
-    	
+    	int resp = M.terminaMundo(d);
+    	if(resp == 1) {
+    		System.out.printf("Fim do game");
+    	}
     	for(i=0;i<5;i++){
     	  System.out.printf("\n");
     	}

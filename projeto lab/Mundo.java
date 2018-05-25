@@ -42,9 +42,7 @@ public class Mundo {
 		}
 
 	 
-	  private char[][]mundo = new char[30][70];
+	  private char[][]mundo = new char[60][100];
 
 		
 	}
-	  
-	  

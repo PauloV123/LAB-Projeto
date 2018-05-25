@@ -34,7 +34,31 @@ abstract class Player {
 	  
 	 public abstract void draw(char [][] mundo);
  
+	 public void move(int velo) {
+        	Random random = new Random();
+        	int r = random.nextInt(4);
+       		if (r == 0){
+	            y = y + velo;
+	     	    	if(y >= 69){
+								 y = y - velo; 
+	    		}
+					
+        }else if (r == 1) {
+            y = (y - velo);
+            if (y <= 1) {
+                y = velo + y;
+						}
+        }else if (r == 2 ) {
+           x = (x + velo);
+	    	   if(x >= 29){
+	    				x = x - velo;
+           }
 		
-	 public abstract void move(int x, int y, int velo);
-		
-	}
+				}else if (r == 3 ) {
+    			x = x - velo;
+        	if (x <= 1){
+        		x = velo + x;
+        }
+		}
+  }	
+}

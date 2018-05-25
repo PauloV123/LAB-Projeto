@@ -1,3 +1,4 @@
+
 import java.util.ArrayList;
 import java.util.Random;
 
@@ -13,7 +14,7 @@ class Main {
   ArrayList <Leao> l = new ArrayList<>();
   ArrayList <Jacare> j = new ArrayList<>();
     
-    for(i=0;i<1;i++){
+    for(i=0;i<4;i++){
        int xc = (int)(Math.random()*27);
        int yc = (int)(Math.random()*67);
        int xl = (int)(Math.random()*27);
@@ -27,7 +28,7 @@ class Main {
        
     }
     
-    for(i=0;i<1;i++){
+    for(i=0;i<4;i++){
 
       M.addMundo(l);
       M.addMundo(c);
@@ -58,6 +59,8 @@ class Main {
     		 M.addMundo(j);
     	}
     	M.setPlayer();
+    	M.andaPlayer();
+    	M.pegaArea();
     	System.out.println();
     	M.imprimeMundo();
     	

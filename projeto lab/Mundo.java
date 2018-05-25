@@ -1,3 +1,4 @@
+
 import java.util.ArrayList;
 
 
@@ -38,11 +39,37 @@ public class Mundo {
 	  }
 	  
 	  public void setPlayer(){
-		  mundo[0][34] = 'P';
+		  mundo[0][33] = 'P';
 		}
+	  
+	  public void andaPlayer() {
+		  int i = 33;
+		  int j = 9;
+		  
+		  while(j != 0) {
+			  mundo[j][33] = 'P';
+			  j--;
+		  }
+		  while(i >= 0) {
+			  mundo[10][i] = 'P';
+			  i--;
+		  }
+	  }
+	  public void pegaArea(){
+		  int i;
+		  int j;
+		  for(i=1;i<10;i++) {
+			  for(j=1;j<33;j++) {
+				  mundo[i][j] = '+';
+			  }
+		  }
+	  }
+	  private char[][]mundo = new char[60][100];
+		  
+	  }
 
 	 
-	  private char[][]mundo = new char[60][100];
+	 
 
 		
-	}
+	

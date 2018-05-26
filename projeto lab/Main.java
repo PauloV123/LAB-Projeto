@@ -1,5 +1,3 @@
-
-package LAB;
 import java.util.ArrayList;
 import java.util.Random;
 
@@ -24,10 +22,13 @@ class Main {
        int yj = (int)(Math.random()*67);
        c.add(new Cobra(xc,yc,2));
        l.add(new Leao(xl,yl,3));
-       j.add(new Jacare(xj,yj,1));     
+       j.add(new Jacare(xj,yj,1));
+       
+       
     }
     
     for(i=0;i<1;i++){
+
       M.addMundo(l);
       M.addMundo(c);
       M.addMundo(j);
@@ -57,38 +58,32 @@ class Main {
     		 M.addMundo(j);
     	}
     	M.setPlayer();
-	    
     	M.andaPlayer();
-	    
     	int d = M.pegaArea();
-	    
     	M.imprimeMundo();
-	    
     	int resp = M.terminaMundo(d);
-	    
     	if(resp == 1) {
     		System.out.printf("Fim do game");
     	}
-    	for(i=0;i<5;i++){
+    	for(i=0;i<2;i++){
     	  System.out.printf("\n");
     	}
-     
-	try{ 	
+	    
+    	try{ 	
             Thread.sleep(800);///esta funcao permite "pausar" o programa a cada instancia de tempo determinada pelo programador 
-	} 
+    	} 
         catch(InterruptedException e){
-	}
-      for ( i = 0; i < j.size(); i++) {
-        j.remove(i);
-      }
-      for ( i = 0; i < c.size(); i++) {
-        c.remove(i);
-      }
-      for ( i = 0; i < l.size(); i++) {
-        l.remove(i);
-      }
-    	
-    }
-    
+        }
+    	for ( i =+ 1 ; i < j.size(); i++) {
+            j.remove(i);
+        }
+    	for ( i =+ 1; i < c.size(); i++) {
+            c.remove(i);
+    	    }
+    	for ( i =+ 1; i < l.size(); i++) {
+            l.remove(i);
+    	    }
+        
+     }
   }
 }

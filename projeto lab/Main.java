@@ -15,7 +15,7 @@ class Main {
   ArrayList <Leao> l = new ArrayList<>();
   ArrayList <Jacare> j = new ArrayList<>();
     
-    for(i=0;i<4;i++){
+    for(i=0;i<1;i++){
        int xc = (int)(Math.random()*27);
        int yc = (int)(Math.random()*67);
        int xl = (int)(Math.random()*27);
@@ -24,13 +24,10 @@ class Main {
        int yj = (int)(Math.random()*67);
        c.add(new Cobra(xc,yc,2));
        l.add(new Leao(xl,yl,3));
-       j.add(new Jacare(xj,yj,1));
-       
-       
+       j.add(new Jacare(xj,yj,1));     
     }
     
-    for(i=0;i<4;i++){
-
+    for(i=0;i<1;i++){
       M.addMundo(l);
       M.addMundo(c);
       M.addMundo(j);
@@ -60,18 +57,28 @@ class Main {
     		 M.addMundo(j);
     	}
     	M.setPlayer();
+	    
     	M.andaPlayer();
+	    
     	int d = M.pegaArea();
-    	System.out.println();
+	    
     	M.imprimeMundo();
+	    
     	int resp = M.terminaMundo(d);
+	    
     	if(resp == 1) {
     		System.out.printf("Fim do game");
     	}
     	for(i=0;i<5;i++){
     	  System.out.printf("\n");
     	}
-	    for ( i = 0; i < j.size(); i++) {
+     
+	try{ 	
+            Thread.sleep(800);///esta funcao permite "pausar" o programa a cada instancia de tempo determinada pelo programador 
+	} 
+        catch(InterruptedException e){
+	}
+      for ( i = 0; i < j.size(); i++) {
         j.remove(i);
       }
       for ( i = 0; i < c.size(); i++) {
@@ -80,11 +87,6 @@ class Main {
       for ( i = 0; i < l.size(); i++) {
         l.remove(i);
       }
-	try{ 	
-            Thread.sleep(800);///esta funcao permite "pausar" o programa a cada instancia de tempo determinada pelo programador 
-	} 
-        catch(InterruptedException e){
-	}
     	
     }
     

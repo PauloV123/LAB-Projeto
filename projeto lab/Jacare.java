@@ -1,5 +1,5 @@
 import java.util.Random;
-public class Jacare extends Player{
+public class Jacare extends Inimigo{
 	public int getX(){
     	return x;
     }
@@ -11,8 +11,6 @@ public class Jacare extends Player{
 	}
 	int[][]  tamanho() {
 		return null;
-		
-		
 	}
 	
 	public void draw(char [][] mundo){

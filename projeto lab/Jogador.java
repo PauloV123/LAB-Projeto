@@ -1,30 +1,45 @@
-package LAB;
+import java.util.ArrayList;
 
 public class Jogador {
-	protected int x;
-	protected int y;
 
-	public Jogador(int x, int y){
-	    this.x = x;
-	    this.y = y;
-        
-	  }
-	  
-	  public void setX(int x){
-	     this.x = x;
-		}
-	  public void setY(int y){
-	     this.y = y;
-		}
-			
-	  public int getX(){
-	      return x;
-		}
-	  public int getY(){
-	      return y;
-		}
 	  public void colocaP(char [][] mundo) {
 		  mundo[0][33] = 'P';
+			andaPlayer(mundo);
+			pegaArea(mundo);
 	  }
+		public void andaPlayer(char [][]mundo ) {
+		  int i = 33;
+		  int j = 9;
+		  
+		  while(j != 0) {
+			  mundo[j][33] = 'P';
+			  j--;
+		  }
+		  while(i >= 0) {
+			  mundo[10][i] = 'P';
+			  i--;
+				
+		  }
+	  }
+	  public int pegaArea(char [][] mundo){
+		  int i;
+		  int j;                                         
+		  int contA = 0;
+		  for(i=1;i<10;i++) {
+			  for(j=1;j<33;j++) {
+				  mundo[i][j] = '+';
+			  }
+				
+		  }
+		  for(i=1;i<10;i++) {
+			  for(j=1;j<33;j++) {
+				  contA++;
+			  }
+			  
+		  }
+		  return contA;
+	  }
+
 }
+
 

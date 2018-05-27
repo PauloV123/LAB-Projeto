@@ -1,5 +1,5 @@
 import java.util.Random;
-public class Cobra extends Player{
+public class Cobra extends Inimigo{
 	 public int getX(){
      	return x;
      }

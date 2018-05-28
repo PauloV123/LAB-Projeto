@@ -1,13 +1,13 @@
 import java.util.ArrayList;
 import java.util.Random;
 
-abstract class Player {
+abstract class Inimigo {
 	protected int x;
 	protected int y;
 	protected int velo;
 	protected int i,j;
 	  
-	public Player(int x, int y, int velo){
+	public Inimigo(int x, int y, int velo){
 	    this.x = x;
 	    this.y = y;
             this.velo = velo;

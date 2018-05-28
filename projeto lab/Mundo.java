@@ -2,8 +2,10 @@ import java.util.ArrayList;
 
 
 public class Mundo {
-	ArrayList<Player> animais = new ArrayList<>();
-	
+	protected char[][]mundo = new char[60][100];
+	ArrayList<Inimigo> animais = new ArrayList<>();
+	Jogador p = new Jogador();
+
 	public void criaMundo(){
 	    int i,j;
 	    for(i=0;i<30;i++){
@@ -17,12 +19,13 @@ public class Mundo {
 	      }
 	    }
 	  }
+		
 	  public void imprimeMundo(){
-		  
-		  for(Player p : animais){
-			  p.draw(mundo);
+		  p.colocaP(mundo);
+		  for(Inimigo ini : animais){
+			  ini.draw(mundo);
 		  }
-		  
+			
 	    for(int i = 0; i < 30; i++){
 	      System.out.println("");
 	      for(int j = 0; j < 70; j++){
@@ -32,46 +35,11 @@ public class Mundo {
 	  }
 	  
 	   
-	  public void addMundo(ArrayList<? extends Player> p){
-		  animais.addAll(p);
+	  public void addMundo(ArrayList<? extends Inimigo> ini){
+		  animais.addAll(ini);
 
 	  }
-	  
-	  public void setPlayer(){
-		  mundo[0][33] = 'P';
-		}
-	  
-	  public void andaPlayer() {
-		  int i = 33;
-		  int j = 9;
-		  
-		  while(j != 0) {
-			  mundo[j][33] = 'P';
-			  j--;
-		  }
-		  while(i >= 0) {
-			  mundo[10][i] = 'P';
-			  i--;
-		  }
-	  }
-	  public int pegaArea(){
-		  int i;
-		  int j;
-		  int contA = 0;
-		  for(i=1;i<10;i++) {
-			  for(j=1;j<33;j++) {
-				  mundo[i][j] = '+';
-			  }
-			
-		  }
-		  for(i=1;i<10;i++) {
-			  for(j=1;j<33;j++) {
-				  contA++;
-			  }
-			  
-		  }
-		  return contA;
-	  }
+	    
 	  public int terminaMundo(int contA) {
 		  int acaba;
 		  if(contA == 1529) {
@@ -80,7 +48,6 @@ public class Mundo {
 			  acaba = 0;
 		  }
 		  return acaba;
-	  }
-	  private char[][]mundo = new char[60][100];
+	  }	  
 		  
-	  }
+}

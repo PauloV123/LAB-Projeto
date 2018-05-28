@@ -1,4 +1,6 @@
 
-Tentamos apresentar o projeto de jogo apartir de uma demonstraÁ„o, mas devido algumas dificuldades n„o conseguimos entregar da maneira que queriamos.
-O que faltou para a demonstraÁ„o:
-Faltou colis„o e faltou a movimentaÁ„o do usuario.
+Tentamos apresentar o projeto de jogo apartir de uma demonstra√ß√£o, mas devido algumas dificuldades n√£o conseguimos entregar da maneira que queriamos.
+O que faltou para a demonstra√ß√£o:
+Faltou colis√£o e faltou a movimenta√ß√£o do usuario.
+
+As imagens seriam para a interface do jogo.

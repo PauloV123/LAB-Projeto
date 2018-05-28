@@ -1,5 +1,5 @@
 import java.util.Random;
-public class Leao extends Player{
+public class Leao extends Inimigo{
 	public int getX(){
     	return x;
     }
@@ -12,7 +12,6 @@ public class Leao extends Player{
 	int[][] tamanho() {
 		return null;
 	}
-	
 	public void draw(char [][] mundo){
 		mundo[x][y] = 'L';
 	} 	 

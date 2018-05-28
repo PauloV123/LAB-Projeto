@@ -5,7 +5,7 @@ class Main {
   public static void main(String[] args) {
   Mundo M = new  Mundo();
   M.criaMundo();
-    
+  
   System.out.println();
     
   int i;
@@ -23,16 +23,13 @@ class Main {
        c.add(new Cobra(xc,yc,2));
        l.add(new Leao(xl,yl,3));
        j.add(new Jacare(xj,yj,1));
-       
-       
     }
     
     for(i=0;i<1;i++){
-
       M.addMundo(l);
       M.addMundo(c);
       M.addMundo(j);
-      M.setPlayer();
+      
     }
     M.imprimeMundo();
     while(true){
@@ -45,6 +42,7 @@ class Main {
       for(i=0;i<j.size();i++){
         j.get(i).move(1);
       }
+	
       M.criaMundo();
       for(i=0;i<l.size();i++){
     		M.addMundo(l);
@@ -57,14 +55,7 @@ class Main {
     	for(i=0;i<j.size();i++){
     		 M.addMundo(j);
     	}
-    	M.setPlayer();
-    	M.andaPlayer();
-    	int d = M.pegaArea();
     	M.imprimeMundo();
-    	int resp = M.terminaMundo(d);
-    	if(resp == 1) {
-    		System.out.printf("Fim do game");
-    	}
     	for(i=0;i<2;i++){
     	  System.out.printf("\n");
     	}
@@ -83,7 +74,6 @@ class Main {
     	for ( i =+ 1; i < l.size(); i++) {
             l.remove(i);
     	    }
-        
      }
   }
 }

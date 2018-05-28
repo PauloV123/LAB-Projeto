@@ -1,0 +1,4 @@
+
+Tentamos apresentar o projeto de jogo apartir de uma demonstração, mas devido algumas dificuldades não conseguimos entregar da maneira que queriamos.
+O que faltou para a demonstração:
+Faltou colisão e faltou a movimentação do usuario.
